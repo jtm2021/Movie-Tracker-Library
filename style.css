@@ -28,12 +28,15 @@ body {
     display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     background-color: var(--dark-blue);
     color: var(--dirty-white);
     margin-bottom: 50px;
+    width: 100vw;
 }
 
 li {
@@ -101,6 +104,10 @@ a:focus {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+nav {
+    width: 100vw;
+}
+
 .nav-menu {
     position: fixed;
     left: -100%;
@@ -121,14 +128,22 @@ a:focus {
     left: 0;
 }
 
-.new-movies-container {
+.new-movies-container,
+.upcoming-films {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;;
+    align-items: center;
+    margin-bottom: 50px;
+    max-width: 1200px;
 }
 
-.new-movies-container-image {
+.new-movies-container {
+    max-width: 1440px;
+}
+
+.new-movies-container-image,
+.upcoming-films-container-image {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -173,6 +188,26 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*-----UPCOMING MOVIES PAGE-------------*/
+.year {
+    font-family: var(--accent-font);
+    font-size: clamp(7rem, 10vw, 8rem);
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+    color: var(--dark-blue);
+    margin: 0;
+    padding-left: 0.2em;
+}
+
+hr {
+    width: 95%;
+    translate: 0 -15px;
+    height: 5px;
+    background-color: var(--fiery-rose);
+    border: none;
+    border-radius: 50%;
 }
 
 
