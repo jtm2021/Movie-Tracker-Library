@@ -110,7 +110,7 @@ nav {
 
 .nav-menu {
     position: fixed;
-    left: -100%;
+    right: -100%;
     top: 80px;
     flex-direction: column;
     background-color: var(--dark-blue);
@@ -125,8 +125,19 @@ nav {
 }
 
 .nav-menu.active {
-    left: 0;
+    right: 0;
 }
+
+.floating-container img {
+    width: 50px;
+    height: auto;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    filter: invert(42%) sepia(70%) saturate(4276%) hue-rotate(328deg) brightness(98%) contrast(88%);
+}
+
+/*-------NEW MOVIES---------*/
 
 .new-movies-container,
 .upcoming-films {
