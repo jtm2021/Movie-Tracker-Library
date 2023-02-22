@@ -2,6 +2,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const plusIcon = document.querySelector('.floating-container');
 const body = document.querySelector('body');
+const toggle = document.querySelector('.toggle__input');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -22,4 +23,5 @@ function darkmode() {
 
 function onload() {
 	document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+    toggle.checked = localStorage.getItem('darkmode') === 'true';
 }
