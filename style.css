@@ -45,6 +45,7 @@ header {
     color: var(--dirty-white);
     margin-bottom: 50px;
     width: 100vw;
+    z-index: 1;
 }
 
 li {
@@ -118,13 +119,12 @@ nav {
 
 .nav-menu {
     position: fixed;
-    right: 100%;
-    top: 80px;
+    top: -240px;
     flex-direction: column;
-    background-color: var(--dark-blue);
+    background-color: var(--light-blue);
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 1s;
     padding: 20px 6px 0 0;
 }
 
@@ -132,8 +132,13 @@ nav {
     margin: 25px 0;
 }
 
+.nav-link {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
 .nav-menu.active {
-    right: 0;
+    top: 80px;
 }
 
 .floating-container img {
@@ -267,7 +272,7 @@ hr {
     height: 20px;
     border-radius: 10px;
     background: #dddddd;
-    transition: background 0.2s;
+    transition: background 0.4s;
 }
 
 .toggle__input:checked~.toggle__fill {
@@ -284,7 +289,7 @@ hr {
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    transition: transform 0.2s;
+    transition: transform 0.4s;
 }
 
 .toggle__input:checked~.toggle__fill::after {
@@ -311,10 +316,5 @@ hr {
     .nav-item {
         margin: 0;
         align-self: center;
-    }
-
-    .nav-link {
-        color: var(--dark-blue);
-        font-weight: bold;
     }
 }
