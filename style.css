@@ -32,6 +32,14 @@ body {
     align-items: center;
 }
 
+body:not(.dark-mode) {
+    background-blend-mode: normal;
+}
+
+.dark-mode {
+    background-blend-mode: exclusion;
+}
+
 header {
     background-color: var(--dark-blue);
     color: var(--dirty-white);
@@ -214,7 +222,7 @@ nav {
     color: var(--dark-blue);
     background-color: var(--light-blue);
     width: 100vw;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 40px;
 }
 
 .toggle {
@@ -226,10 +234,11 @@ nav {
     cursor: pointer;
 }
 
-/* 
+
 .toggle__input {
     display: none;
 }
+
 
 .toggle__fill {
     position: relative;
