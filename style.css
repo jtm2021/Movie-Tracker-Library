@@ -132,8 +132,8 @@ nav {
     width: 50px;
     height: auto;
     position: fixed;
-    bottom: 100px;
-    right: 30px;
+    bottom: 115px;
+    right: 15px;
     filter: invert(42%) sepia(70%) saturate(4276%) hue-rotate(328deg) brightness(98%) contrast(88%);
 }
 
@@ -191,15 +191,75 @@ nav {
 .footer-container {
     background-color: var(--dark-blue);
     color: var(--dirty-white);
-    padding: 20px 0;
     text-align: center;
-    height: 75px;
     width: 100vw;
     margin-top: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.footer-container p {
+    padding: 0.5em;
+}
+
+/*---------------------Toggle Button----------------*/
+.toggle-container {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    width: 100vw;
+    padding: 0.5em;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* 
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill {
+    background: var(--dark-blue);
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill::after {
+    transform: translateX(25px);
+} */
 
 /*-----UPCOMING MOVIES PAGE-------------*/
 .year {
@@ -220,6 +280,7 @@ hr {
     border: none;
     border-radius: 50%;
 }
+
 
 
 @media (min-width: 768px) {
