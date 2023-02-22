@@ -26,10 +26,18 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+body:not(.dark-mode) {
+    background-blend-mode: normal;
+}
+
+.dark-mode {
+    background-blend-mode: exclusion;
 }
 
 header {
@@ -166,7 +174,7 @@ nav {
     font-family: var(--accent-font);
     font-size: 150px;
     font-weight: bold;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+    text-shadow: 3px 3px 10px rgba(248, 248, 248, 0.8);
     color: var(--fiery-rose);
     translate: 10px 30px;
     z-index: -1;
@@ -185,7 +193,7 @@ nav {
     height: 100%;
     object-fit: cover;
     border-radius: 5%;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
 }
 
 .footer-container {
@@ -266,7 +274,7 @@ nav {
     font-family: var(--accent-font);
     font-size: clamp(7rem, 10vw, 8rem);
     font-weight: bold;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
     color: var(--dark-blue);
     margin: 0;
     padding-left: 0.2em;
@@ -281,6 +289,80 @@ hr {
     border-radius: 50%;
 }
 
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    top: -70px;
+    gap: 3rem;
+    background-color: var(--light-blue);
+    height: 40px;
+    padding: 0 0 0 40px;
+    position: relative;
+}
+
+.nav-item {
+    display: none;
+}
+
+
+
+/*-----------------TOGGLE BUTTON--------------------*/
+
+.toggle-container {
+    position: fixed;
+    right: 20px;
+    top: 104px;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--dark-blue)
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill {
+    background: var(--dark-blue);
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill::after {
+    transform: translateX(25px);
+}
 
 
 @media (min-width: 768px) {
@@ -288,21 +370,10 @@ hr {
         display: none;
     }
 
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        left: 0;
-        top: -70px;
-        gap: 3rem;
-        background-color: var(--light-blue);
-        height: 40px;
-        padding: 0 0 0 40px;
-        position: relative;
-    }
-
     .nav-item {
         margin: 0;
         align-self: center;
+        display: flex;
     }
 
     .nav-link {
