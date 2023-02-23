@@ -296,6 +296,33 @@ hr {
     transform: translateX(25px);
 } 
 
+/*---------------------Add Movie Form----------------*/
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background-color: var(--dirty-white);
+    border-radius: 10px;
+    box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
+}
+
+#add-movie-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
 @media (min-width: 768px) {
     .hamburger {
         display: none;
