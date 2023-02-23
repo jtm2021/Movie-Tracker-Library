@@ -198,7 +198,7 @@ nav {
     height: 100%;
     object-fit: cover;
     border-radius: 5%;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 26px 3px rgb(255 255 255 / 50%);
 }
 
 .footer-container {
