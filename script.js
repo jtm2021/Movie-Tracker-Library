@@ -9,12 +9,9 @@ const form = document.querySelector('.form-container');
 const closeFormBtn = document.getElementById('close-form-btn');
 
 
-closeFormBtn.addEventListener('click', function() {
-    form.classList.toggle('active');
-    plusIcon.style.display = 'block';
-})
 
-hamburger.addEventListener('click', (e) => {
+
+hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 })
@@ -134,3 +131,9 @@ document.getElementById('add-movie-form').addEventListener('submit', function(e)
 // }
 
 addLocalStorage();
+
+//Keep this at the very bottom of the script to prevent errors
+closeFormBtn.addEventListener('click', function() {
+    form.classList.toggle('active');
+    plusIcon.style.display = 'block';
+})

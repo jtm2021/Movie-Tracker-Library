@@ -144,9 +144,9 @@ nav {
 .floating-container img {
     width: 50px;
     height: auto;
-    position: fixed;
-    bottom: 115px;
-    right: 15px;
+    position: absolute;
+    bottom: 110px;
+    right: 20px;
     filter: invert(42%) sepia(70%) saturate(4276%) hue-rotate(328deg) brightness(98%) contrast(88%);
 }
 
@@ -211,6 +211,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: sticky;
 }
 
 .footer-container p {
@@ -337,15 +338,24 @@ hr {
 }
 
 /*-----------------Movie Cards Display-------------*/
+.main-content {
+    margin-bottom: 50px;
+}
+
+.movie-card-container {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
 .movie-card {
     background-color: #bad7e9;
+    border-radius: 14px;
 }
 
 .card_body {
-    margin-bottom: 2em;
+    margin-bottom: 20px;
 }
-
-
 
 
 @media (min-width: 768px) {
