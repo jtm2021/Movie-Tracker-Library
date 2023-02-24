@@ -85,7 +85,6 @@ function toggleSeen(index) {
     saveAndRender();
 }
 
-
 function deleteMovie(index) {
     library.splice(index, 1);
     saveAndRender();
