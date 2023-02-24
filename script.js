@@ -26,8 +26,8 @@ function darkmode() {
     localStorage.setItem('darkmode', !wasDarkmode);
     const element = document.body;
     element.classList.toggle('dark-mode', !wasDarkmode);
-    const title = document.querySelector('.movie-title');
-    title.style.color = 'white';
+    // const title = document.querySelector('.movie-title');
+    // title.style.color = 'white';
 }
 
 function onload() {
