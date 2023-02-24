@@ -2,9 +2,13 @@
 
 :root {
     --dark-blue: #2b3467;
+    --dark-blue: rgb(43, 52, 103);
     --light-blue: #bad7e9;
+    --light-blue: rgb(186, 215, 233);
     --dirty-white: #fcffe7;
+    --dirty-white: rgb(252, 255, 231);
     --fiery-rose: #eb455f;
+    --fiery-rose: rgb(235, 69, 95);
 
     --primary-font: 'Montserrat', sans-serif;
     --accent-font: 'Carter One', cursive;
@@ -298,6 +302,12 @@ hr {
 } 
 
 /*---------------------Add Movie Form----------------*/
+.watchlist-library {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-container {
     display: none;
 }
@@ -313,12 +323,11 @@ hr {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    translate: 48px -25px;
+    translate: 18px -25px;
 }
 
 .form-container.active {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
@@ -326,6 +335,7 @@ hr {
     background-color: var(--dirty-white);
     border-radius: 10px;
     box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
+    margin-bottom: 20px;
 }
 
 #add-movie-form {
@@ -334,10 +344,49 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin: 2.25rem 0;
+    margin: 2.25rem 0 1.5rem;
+}
+
+.input-fields, #add-movie-btn {
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+}
+
+label {
+    font-weight: bold;
+}
+
+#add-movie-btn {
+    width: 118px;
+    background-color: var(--fiery-rose);
+    font-weight: bold;
+    color: var(--dirty-white);
+    margin: 19px 0 0;
+}
+
+h2, h4, p {
+    overflow: scroll;
 }
 
 /*-----------------Movie Cards Display-------------*/
+#movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    max-width: 1280px;
+    height: auto;
+    border-radius: 10px;
+}
+
 .main-content {
     margin-bottom: 50px;
 }
@@ -349,7 +398,7 @@ hr {
 }
 
 .movie-card {
-    background-color: #bad7e9;
+    background: linear-gradient(145deg, var(--light-blue), var(--dark-blue));
     border-radius: 14px;
 }
 

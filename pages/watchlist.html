@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personal project of a movie tracker library. Users can add a movie they've seen and put movies on their watchlist.">
+    <meta name="description"
+        content="A personal project of a movie tracker library. Users can add a movie they've seen and put movies on their watchlist.">
     <meta name="keywords" content="movie, movie traker, virtual library, new movies, upcoming films">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js" defer></script>
     <title>Document</title>
 </head>
+
 <body onload="onload()">
     <header>
         <div class="header-bar">
@@ -20,7 +23,7 @@
                 <span class="bar"></span>
             </div>
             <a href="../index.html" class="header-text">Movie Tracker Library</a>
-        </div>        
+        </div>
     </header>
     <nav>
         <div class="menu-container">
@@ -46,34 +49,36 @@
             <div class="form-container">
                 <form id="add-movie-form">
                     <img id="close-form-btn" src="../assets/icons/close-circle.svg" alt="">
-                    <label class="title_label"for="title">Movie Title</label>
-                    <input type="text" id="title" required>
+                    <label class="title_label" for="title">Movie Title</label>
+                    <input class="input-fields" type="text" id="title" required>
                     <label for="director">Director</label>
-                    <input type="text" id="director" required>
+                    <input class="input-fields" type="text" id="director" required>
                     <label for="genre">Genre</label>
-                    <input type="text" id="genre" required>
+                    <input class="input-fields" type="text" id="genre" required>
                     <label for="year">Date of Release</label>
-                    <input type="date" id="year" required>
-                    <label for="seen">Seen</label>
-                    <input type="checkbox" id="seen">
-                    <input type="submit" value="Add Movie">
+                    <input class="input-fields" type="date" id="year" required>
+                    <div class="seen-container">
+                        <label for="seen">Seen</label>
+                        <input type="checkbox" id="seen">
+                    </div>
+                    <input id="add-movie-btn" type="submit" value="Add Movie">
                 </form>
             </div>
         </div>
         <div id="movies-list">
         </div>
-        
+
     </section>
 
-    
+
 
 
     <footer class="footer-container">
         <div class="floating-container">
             <img id="add-movie" src="../assets/icons/plus-circle.svg" alt="Plus icon.">
         </div>
-        <div class="toggle-container" > Dark Mode
-            <label class="toggle" for="darkmodeToggle" >
+        <div class="toggle-container"> Dark Mode
+            <label class="toggle" for="darkmodeToggle">
                 <input class="toggle__input" type="checkbox" id="darkmodeToggle" onclick="darkmode()">
                 <div class="toggle__fill"></div>
             </label>
@@ -81,4 +86,5 @@
         <p>@Copyright 2023 | jtmCoder</p>
     </footer>
 </body>
+
 </html>

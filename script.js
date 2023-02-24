@@ -130,7 +130,7 @@ document.getElementById('add-movie-form').addEventListener('submit', function(e)
 //     render();
 // }
 
-addLocalStorage();
+addLocalStorage(); //temporarily keep open to test
 
 //Keep this at the very bottom of the script to prevent errors
 closeFormBtn.addEventListener('click', function() {
