@@ -336,6 +336,16 @@ hr {
     margin: 2.25rem 0;
 }
 
+/*-----------------Movie Cards Display-------------*/
+.movie-card {
+    background-color: #bad7e9;
+}
+
+.card_body {
+    margin-bottom: 2em;
+}
+
+
 
 
 @media (min-width: 768px) {

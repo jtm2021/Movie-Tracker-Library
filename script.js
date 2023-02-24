@@ -79,16 +79,20 @@ function render() {
         let movie = library[i];
         let movieCards = document.createElement('div');
         movieCards.innerHTML = `
-            <div class="card_header">
-                <h2 class="movie__title">${movie.title}</h2>
-                <h4 class="movie__director">Directed by ${movie.director}</h4>
-            </div>
-            <div class="card_body">
-                <p class="movie__genre dark-mode">Genre: ${movie.genre}</p>
-                <p class="movie__year">Date of Release: ${movie.year}</p>
-                <p class="movie__seen">${movie.seen ? "Status: Seen" : "Status: On Watchlist"}</p>
-                <button class="delete__movie" onclick="deleteMovie(${i})">Delete</button>
-                <button class="toggle__seen" onclick="toggleSeen(${i})">${movie.seen ? "Add To Watchlist" : "Seen"}</button> 
+            <div class="movie-card">
+                <div class="movie-card-container">
+                    <div class="card_header">
+                        <h2 class="movie__title">${movie.title}</h2>
+                        <h4 class="movie__director">Directed by ${movie.director}</h4>
+                    </div>
+                    <div class="card_body">
+                        <p class="movie__genre dark-mode">Genre: ${movie.genre}</p>
+                        <p class="movie__year">Date of Release: ${movie.year}</p>
+                        <p class="movie__seen">${movie.seen ? "Status: Seen" : "Status: On Watchlist"}</p>
+                        <button class="delete__movie" onclick="deleteMovie(${i})">Delete</button>
+                        <button class="toggle__seen" onclick="toggleSeen(${i})">${movie.seen ? "Add To Watchlist" : "Seen"}</button> 
+                    </div>
+                </div>
             </div>`;
         moviesList.appendChild(movieCards);
     }
@@ -114,6 +118,8 @@ function addMovieToLibrary() {
     let newMovie = new Movie(title, director, genre, year, seen);
     library.push(newMovie);
     render();
+    form.classList.toggle('active');
+    plusIcon.style.display = 'block';
     // saveAndRender();
 }
 
@@ -127,4 +133,4 @@ document.getElementById('add-movie-form').addEventListener('submit', function(e)
 //     render();
 // }
 
-// addLocalStorage();
+addLocalStorage();
