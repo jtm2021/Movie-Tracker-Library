@@ -14,11 +14,13 @@ const closeFormBtn = document.getElementById('close-form-btn');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    form.style.zIndex = '-1';
 })
 
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    form.style.zIndex = 0;
 }))
 
 function darkmode() {

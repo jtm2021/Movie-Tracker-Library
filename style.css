@@ -407,13 +407,29 @@ h2, h4, p {
     margin-bottom: 20px;
 }
 
+.delete__movie,
+.toggle__seen {
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.delete__movie:hover,
+.toggle__seen:hover {
+    background-color: lightgreen;
+}
+
 #add-movie {
     cursor: pointer;
 }
 
-#close-form-btn:hover, #add-movie-btn:hover, #add-movie:hover {
+#close-form-btn:hover, 
+#add-movie-btn:hover, 
+#add-movie:hover {
     opacity: 0.7;
 }
+
 
 @media (min-width: 768px) {
     .hamburger {
