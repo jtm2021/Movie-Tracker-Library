@@ -368,7 +368,9 @@ label {
     cursor: pointer;
 }
 
-h2, h4, p {
+.movie-card > h2,
+.novie-card > h4,
+.movie-card > p {
     overflow: scroll;
 }
 
