@@ -301,13 +301,27 @@ hr {
     display: none;
 }
 
+#add-movie-form {
+    position: relative;
+}
+
+#close-form-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    translate: 48px -25px;
+}
+
 .form-container.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 400px;
+    height: auto;
     background-color: var(--dirty-white);
     border-radius: 10px;
     box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
@@ -319,7 +333,10 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin: 2.25rem 0;
 }
+
+
 
 @media (min-width: 768px) {
     .hamburger {
