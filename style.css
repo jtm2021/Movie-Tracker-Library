@@ -49,7 +49,7 @@ header {
     color: var(--dirty-white);
     margin-bottom: 50px;
     width: 100vw;
-    z-index: 1;
+    z-index: 3;
 }
 
 li {
@@ -143,6 +143,7 @@ nav {
 
 .nav-menu.active {
     top: 80px;
+    z-index: 2;
 }
 
 .floating-container img {
