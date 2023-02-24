@@ -417,7 +417,9 @@ h2, h4, p {
 }
 
 .delete__movie:hover,
-.toggle__seen:hover {
+.toggle__seen:hover,
+.delete__movie:focus,
+.toggle__seen:focus  {
     background-color: lightgreen;
 }
 
@@ -439,6 +441,7 @@ h2, h4, p {
 
 #tutorial_section > * p {
     padding:0 2em;
+    font-size: 1.3rem;
 }
 
 .tutorial {
@@ -452,11 +455,6 @@ h2, h4, p {
 .tutorial_welcome h4 {
     font-size: clamp(1.5rem, 3vw, 2rem);
     text-align: center;
-}
-
-.tutorial_welcome p {
-    font-size: clamp(16px, 3vw, 1.2rem);
-    font-weight: 600;
 }
 
 .tutorial_msg {
@@ -515,7 +513,7 @@ h2, h4, p {
     }
     .tutorial_msg {
         width: 50%;
-        align-items: center;
+        place-self: center;
         /* outline: 1px solid red; */
     }
 
