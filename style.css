@@ -368,6 +368,7 @@ label {
     font-weight: bold;
     color: var(--dirty-white);
     margin: 19px 0 0;
+    cursor: pointer;
 }
 
 h2, h4, p {
@@ -406,6 +407,13 @@ h2, h4, p {
     margin-bottom: 20px;
 }
 
+#add-movie {
+    cursor: pointer;
+}
+
+#close-form-btn:hover, #add-movie-btn:hover, #add-movie:hover {
+    opacity: 0.7;
+}
 
 @media (min-width: 768px) {
     .hamburger {
