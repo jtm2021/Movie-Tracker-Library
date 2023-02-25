@@ -124,4 +124,5 @@ plusIcon.addEventListener('click', function() {
     movieCards.forEach(movie => {
         movie.style.opacity = '0.1';
     })
+    window.scrollTo(0, 0);
 })

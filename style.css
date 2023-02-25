@@ -8,6 +8,8 @@
 
     --primary-font: 'Montserrat', sans-serif;
     --accent-font: 'Carter One', cursive;
+
+    scroll-behavior: smooth;
 }
 
 *,
