@@ -7,6 +7,7 @@ const form = document.querySelector('.form-container');
 const closeFormBtn = document.getElementById('close-form-btn');
 const movieCards = document.querySelectorAll('#movies-list');
 const floatingForm = document.querySelector('.watchlist-library');
+const addMovieBtn = document.getElementById('add-movie-btn');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -116,6 +117,12 @@ addLocalStorage();
 closeFormBtn.addEventListener('click', function() {
     form.classList.toggle('active');
     plusIcon.style.display = 'block';
+    movieCards.forEach(movie => {
+        movie.style.opacity = '1';
+    })
+})
+
+addMovieBtn.addEventListener('click', function() {
     movieCards.forEach(movie => {
         movie.style.opacity = '1';
     })
