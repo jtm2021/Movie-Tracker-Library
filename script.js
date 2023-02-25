@@ -5,6 +5,8 @@ const body = document.querySelector('body');
 const toggle = document.querySelector('.toggle__input');
 const form = document.querySelector('.form-container');
 const closeFormBtn = document.getElementById('close-form-btn');
+const movieCards = document.querySelectorAll('#movies-list');
+const floatingForm = document.querySelector('.watchlist-library');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -110,9 +112,16 @@ addLocalStorage();
 closeFormBtn.addEventListener('click', function() {
     form.classList.toggle('active');
     plusIcon.style.display = 'block';
+    movieCards.forEach(movie => {
+        movie.style.opacity = '1';
+    })
 })
 
 plusIcon.addEventListener('click', function() {
     form.classList.toggle('active');
     plusIcon.style.display = 'none';
+    floatingForm.style.zIndex = '1';
+    movieCards.forEach(movie => {
+        movie.style.opacity = '0.1';
+    })
 })
