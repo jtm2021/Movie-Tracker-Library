@@ -10,7 +10,11 @@ const floatingForm = document.querySelector('.watchlist-library');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active'); 
+    navMenu.classList.toggle('active');
+    window.addEventListener('scroll', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    })
 })
 
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
