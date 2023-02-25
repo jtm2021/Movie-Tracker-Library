@@ -3,7 +3,7 @@ A virtual library app. It is a part of Brainnest Advanced Frontend Software Deve
 
 ![Mockup Screenshot](./assets/readme-images/mockup.png "Mockup Screenshot")
 
-- The app is hosted on Github Pages. You can access it here:  [here](https://jtm2021.github.io/Movie-Tracker-Library/).
+- The app is hosted on Github Pages. You can access it [here](https://jtm2021.github.io/Movie-Tracker-Library/).
 - The repository can be found [here](https://github.com/jtm2021/Movie-Tracker-Library).
 
 ## Wireframes
