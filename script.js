@@ -36,7 +36,6 @@ function onload() {
 }
 
 // --------------------------Adding a film to list----------------------
-
 let library = [];
 
 function Movie(title, director, genre, year, seen) {
@@ -123,9 +122,14 @@ closeFormBtn.addEventListener('click', function() {
 })
 
 addMovieBtn.addEventListener('click', function() {
-    movieCards.forEach(movie => {
-        movie.style.opacity = '1';
-    })
+    if (document.getElementById('title').value == '' || document.getElementById('director').value == '' || document.getElementById('genre').value == '' || document.getElementById('year').value == '') {
+        return false;
+    } else {
+        plusIcon.style.display = 'block';
+        movieCards.forEach(movie => {
+            movie.style.opacity = '1';
+        })        
+    }
 })
 
 plusIcon.addEventListener('click', function() {
@@ -137,3 +141,8 @@ plusIcon.addEventListener('click', function() {
     })
     window.scrollTo(0, 0);
 })
+
+function checkForm() {
+    
+}
+    

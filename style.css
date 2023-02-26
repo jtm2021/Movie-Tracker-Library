@@ -313,6 +313,24 @@ hr {
 
 .form-container {
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    background-color: var(--dirty-white);
+    border-radius: 10px;
+    box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
+    margin-bottom: 20px;
+    animation: hide 0.3s forwards;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 
 #add-movie-form {
@@ -331,14 +349,18 @@ hr {
 
 .form-container.active {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: auto;
-    background-color: var(--dirty-white);
-    border-radius: 10px;
-    box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
+    opacity: 1;
     margin-bottom: 20px;
+    animation: transform 0.3s ease-in-out;
+}
+
+@keyframes transform {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 #add-movie-form {
@@ -406,6 +428,12 @@ label {
 .movie-card {
     background: linear-gradient(145deg, var(--light-blue), var(--dark-blue));
     border-radius: 14px;
+}
+
+.movie-card.seen {
+    background: linear-gradient(145deg, var(--light-blue), var(--dark-blue));
+    border-radius: 14px;
+    opacity: 0.5;
 }
 
 .card_body {
