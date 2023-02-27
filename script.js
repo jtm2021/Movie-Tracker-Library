@@ -86,7 +86,7 @@ function render() {
     }
 }
 
-function toggleSeen(index) {
+function toggleSeen(index, e) {
     library[index].seen = !library[index].seen;
     saveAndRender();
 }

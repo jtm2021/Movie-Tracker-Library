@@ -321,16 +321,6 @@ hr {
     border-radius: 10px;
     box-shadow: 0 0 26px 3px rgb(186 215 233 / 50%);
     margin-bottom: 20px;
-    animation: hide 0.3s forwards;
-}
-
-@keyframes hide {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
 }
 
 #add-movie-form {
